@@ -1,12 +1,8 @@
 package tk.hadeslee.main;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Project: spring-boot-hello-world
@@ -17,12 +13,10 @@ import javax.servlet.http.HttpServletResponse;
  * Note:
  * To change this template use File | Settings | File Templates.
  */
-@Controller
+@RestController
 public class MainController {
-    @RequestMapping(method = RequestMethod.GET, value = {"/", "/index.html"})
-    public String main(HttpServletRequest request, HttpServletResponse response, Model model) throws Exception {
-        System.out.println("main!");
-
-        return "/wcl/main/index";
+    @RequestMapping("/")
+    public @ResponseBody String index(){
+        return "Hello hadeslee spring boot!";
     }
 }
