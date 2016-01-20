@@ -21,8 +21,7 @@ import java.util.List;
 @RestController
 public class MainController {
 
-    @Autowired
-    private UserRepository userRepository;
+    @Autowired private UserRepository userRepository;
 
     @RequestMapping("/")
     public @ResponseBody String index(){
