@@ -1,4 +1,4 @@
-package test;
+package tk.hadeslee.test;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
