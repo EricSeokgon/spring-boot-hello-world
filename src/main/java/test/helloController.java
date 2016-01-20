@@ -12,8 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
  * Note:
  * To change this template use File | Settings | File Templates.
  */
+
 @RestController
-public class testController {
+public class helloController {
     @RequestMapping("/hello")
     public String hello(){
         return "hello spring boot!";
