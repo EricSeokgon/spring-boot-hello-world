@@ -38,4 +38,10 @@ public class MainController {
     List<User> getUserList() {
         return userRepository.findAll();
     }
+
+    @RequestMapping("/velocity")
+    public String velocity() {
+        return "index";
+    }
+
 }
